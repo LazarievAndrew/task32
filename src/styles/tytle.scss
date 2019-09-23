@@ -1,0 +1,29 @@
+
+.vizible{
+  width: 100%;
+}
+
+.title{
+  text-align: center;
+  font-size: 50px;
+  letter-spacing:5px;
+}
+
+.select-dog{
+  display: flex;
+  justify-content: center;
+}
+
+.sub-breed{
+  width: 300px;
+  height: 25px;
+  display: none;
+  
+  &:hover{
+    background-color: rgb(241, 240, 240);
+  }
+  
+  &:focus{
+    background-color: rgb(241, 240, 240);
+  }
+}

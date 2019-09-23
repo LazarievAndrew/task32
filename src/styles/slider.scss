@@ -1,0 +1,48 @@
+
+.slider{
+    width: 640px;
+    height: 480px;
+    overflow: hidden;
+    position: relative;
+    margin: 50px auto;
+    display: none;
+}
+
+.img-slider{
+    width: 640px;
+    height: 480px;
+    object-fit: cover;
+}
+
+.slider--line{
+    display: flex;
+    position: relative;
+    transition: all ease 1s;
+    right: 0;
+}
+
+.left--arrow{
+    position: absolute;
+    width: 100px;
+    line-height: 100px;
+    left: 0;
+    top: 140px;
+    text-align: center;
+    font-size: 50px;
+    color: red;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.right--arrow{
+    position: absolute;
+    width: 100px;
+    line-height: 100px;
+    right: 0;
+    top: 140px;
+    text-align: center;
+    font-size: 50px;
+    color: red;
+    font-weight: 700;
+    cursor: pointer;
+}
