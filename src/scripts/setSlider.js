@@ -31,8 +31,7 @@ export default function setSlider(res) {
         if (position > ((list.length - 1) * 640)) {
             position = 0;
         }
-        // eslint-disable-next-line prefer-template
-        line.style.right = position + 'px';
+        line.style.right = `${position}px`;
     };
 
     leftArrow.onclick = function moveRight() {
