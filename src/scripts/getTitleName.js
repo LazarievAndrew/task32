@@ -1,4 +1,4 @@
-export function getTitleName(element) {
-    let name = document.querySelector(element);
+export default function getTitleName(element) {
+    const name = document.querySelector(element);
     return name.textContent;
 }

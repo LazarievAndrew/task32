@@ -1,8 +1,9 @@
-import { clearOption } from './clearOption'
-import { createList } from './createList'
-import { setImgList } from './setImgList'
+import clearOption from './clearOption';
+// eslint-disable-next-line import/no-cycle
+import createList from './createList';
+import setImgList from './setImgList';
 
-export function createSelect(element, breed) {
+export default function createSelect(element, breed) {
     const select = document.getElementsByClassName('sub-breed')[0];
     const slider = document.getElementsByClassName('slider')[0];
 
@@ -11,10 +12,9 @@ export function createSelect(element, breed) {
         slider.style.display = 'none';
         select.style.display = 'block';
         createList(element, 'sub-breed', 'dog-option', 'option');
-
     } else {
         select.style.display = 'none';
-        setImgList(breed)
+        setImgList(breed);
         slider.style.display = 'block';
     }
 }

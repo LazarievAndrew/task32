@@ -1,4 +1,4 @@
-export function createTitle(name, element) {
-    let title = document.querySelector(element);
+export default function createTitle(name, element) {
+    const title = document.querySelector(element);
     title.textContent = name;
 }

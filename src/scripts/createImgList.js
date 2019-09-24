@@ -1,7 +1,6 @@
-export function createImgList(res) {
+export default function createImgList(res) {
     if (res.length > 7) {
-        return res.slice(0, 7)
-    } else {
-        return res;
+        return res.slice(0, 7);
     }
+    return res;
 }

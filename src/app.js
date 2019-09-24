@@ -1,6 +1,6 @@
 // Переделать задание task29 используя webpack
 
-///////////////////////////////////////////////////////////////////////////////////
+// /////////////////////////////////////////////////////////////////////////////////
 // task29
 
 // Dog API
@@ -24,20 +24,21 @@
 //       ["mastiff", "mexicanhairless"]
 //  при клике/выборе одной из пород показать заголовок с названием породы
 // при выборе породы запросить все картинки и отобразить их в слайдере
-// если у породы есть виды как например у mastiff("bull",  "english",  "tibetan"), 
-// отобразить селект с выбором вида и только после выбора вида запрашивать картинки и рисовать слайдер.
-///////////////////////////////////////////////////////////////////////////////////////////////////////
+// если у породы есть виды как например у mastiff("bull",  "english",  "tibetan")
+// отобразить селект с выбором вида и только после выбора вида
+//  запрашивать картинки и рисовать слайдер.
+// //////////////////////////////////////////////////////////////////////////////
 
 
-import { makeRequest } from './scripts/makeRequest'
-import { createList } from './scripts/createList'
-import { eventAction } from './scripts/eventAction'
-import { searchInput } from './scripts/searchInput'
-import { getOptionBreed } from './scripts/getOptionBreed'
+import makeRequest from './scripts/makeRequest';
+import createList from './scripts/createList';
+import eventAction from './scripts/eventAction';
+import searchInput from './scripts/searchInput';
+import getOptionBreed from './scripts/getOptionBreed';
 
 
 makeRequest('https://dog.ceo/api/breeds/list/all')
-    .then(res => createList(Object.keys(res.message), 'list', "breed", 'li'));
+    .then((res) => createList(Object.keys(res.message), 'list', 'breed', 'li'));
 
 eventAction('input', '#search', searchInput);
 

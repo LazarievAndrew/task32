@@ -1,11 +1,11 @@
-import { makeRequest } from './makeRequest'
-import { createSelect } from './createSelect'
-import { createTitle } from './createTitle'
+import makeRequest from './makeRequest';
+import createSelect from './createSelect';
+import createTitle from './createTitle';
 
-export function listOnClick(element, breed) {
+export default function listOnClick(element, breed) {
     element.onclick = () => {
         makeRequest(`https://dog.ceo/api/breed/${breed}/list`)
-            .then(res => createSelect(res.message, breed))
-            .then(() => createTitle(breed, '.title'))
+            .then((res) => createSelect(res.message, breed))
+            .then(() => createTitle(breed, '.title'));
     };
 }
