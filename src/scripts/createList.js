@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/no-cycle
 import listOnClick from './listOnClick';
 
 export default function createList(dogs, className, addingClassName, creatingElement) {
@@ -24,7 +23,10 @@ export default function createList(dogs, className, addingClassName, creatingEle
 
     const parent = document.getElementsByClassName(className)[0];
     if (creatingElement === 'option') {
-        parent.appendChild(element).textContent = 'подпорода';
+        element.setAttribute('disabled', '');
+        element.setAttribute('selected', '');
+        element.textContent = 'подпорода';
+        parent.appendChild(element);
     }
     parent.appendChild(fragment);
 }

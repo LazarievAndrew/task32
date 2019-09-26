@@ -37,9 +37,12 @@ import searchInput from './scripts/searchInput';
 import getOptionBreed from './scripts/getOptionBreed';
 
 
-makeRequest('https://dog.ceo/api/breeds/list/all')
-    .then((res) => createList(Object.keys(res.message), 'list', 'breed', 'li'));
+// makeRequest('https://dog.ceo/api/breeds/list/all')
+//     .then((res) => createList(Object.keys(res.message), 'list', 'breed', 'li'));
 
 eventAction('input', '#search', searchInput);
 
 eventAction('change', '.sub-breed', getOptionBreed);
+
+makeRequest('https://dog.ceo/api/breeds/list/all')
+    .then((res) => createList(Object.keys(res.message), 'list', 'breed', 'li'));

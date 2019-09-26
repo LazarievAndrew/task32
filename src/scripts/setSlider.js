@@ -1,4 +1,3 @@
-/* eslint-disable vars-on-top */
 import clearOption from './clearOption';
 
 export default function setSlider(res) {
@@ -18,8 +17,7 @@ export default function setSlider(res) {
 
     const list = document.querySelectorAll('.img-slider');
 
-    // eslint-disable-next-line prefer-template
-    line.style.width = list.length * 640 + 'px';
+    line.style.width = `${list.length * 640}px`;
 
     const leftArrow = document.querySelector('.left--arrow');
     const rightArrow = document.querySelector('.right--arrow');

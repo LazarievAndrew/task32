@@ -1,5 +1,4 @@
 import clearOption from './clearOption';
-// eslint-disable-next-line import/no-cycle
 import createList from './createList';
 import setImgList from './setImgList';
 
